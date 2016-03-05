@@ -92,25 +92,10 @@ function qhacksparse(arr){
 
 function initializeFile(ext, newCount){
 	vars['file' + newCount] += "BEGIN:VCALENDAR\nMETHOD:PUBLISH\nVERSION:2.0\nX-WR-CALNAME:" + ext + "\n";
-
+	vars['file' + newCount] += "X-APPLE-CALENDAR-COLOR:#ff2351 \n"
 	if(newCount == 1){
-			COLOR = "FF0000";
-		} 
-		else if(newCount == 2){
-			COLOR = "FF7F00";
+			COLOR = #ff2351;
 		}
-		else if(newCount == 3){
-			COLOR = "FFFF00";}
-		else if(newCount == 4){
-			COLOR = "00FF00";}
-		else if(newCount == 5){
-			COLOR = "0000FF";}
-		else if(newCount == 6){
-			COLOR = "4B0082";}
-		else{
-			COLOR = "8F00FF";
-		}
-	vars['file' + newCount] += "X-APPLE-CALENDAR-COLOR:#" + COLOR + "\n";
 }
 function writeString(file, type, hs,  ms, he, me,  loc,day){
 	vars['file' + newCount] += String.format("BEGIN:VEVENT\nDTEND;TZID=America/Toronto:201601%02dT%02d%02d00\n", 3+day,he,me);
