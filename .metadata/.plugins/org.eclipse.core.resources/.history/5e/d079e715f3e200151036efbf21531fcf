@@ -1,0 +1,12 @@
+function jsparse(arr){
+	String cal = null;
+	String type = null;
+	int hStart = 0, hEnd = 0, mStart = 0, mEnd = 0;
+	String location;
+	String temp;
+	int day = 0; //1 = mon, 2 = tues...
+	int i = 0;
+	while(i < 116){
+		
+	}
+}

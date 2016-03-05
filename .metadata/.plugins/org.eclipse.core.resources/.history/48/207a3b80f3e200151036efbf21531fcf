@@ -1,0 +1,21 @@
+function jsparse(arr){
+	String cal = null;
+	String type = null;
+	int hStart = 0, hEnd = 0, mStart = 0, mEnd = 0;
+	String location;
+	String temp;
+	int day = 0; //1 = mon, 2 = tues...
+	int i = 0;
+	while(i < 116){
+		if (Character.isDigit(arr[i].charAt(5)) && Character.isDigit(arr[i].charAt(6)) && Character.isDigit(arr[i].charAt(7))){
+			if (!arr[i].substring(0, 8).equals(cal)){
+			cal = arr[i].substring(0, 8);
+			initializeFile(cal);
+			type = arr[i+1].substring(0, 3);
+			temp = arr[i+2];
+			day=getDay(temp);
+			temp = temp.substring(temp.indexOf(' ')+1);
+			}
+		}
+	}
+}

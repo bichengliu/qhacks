@@ -1,5 +1,9 @@
 # read file here
-
+x = "ELEC 221-001"
+if x[5].isdigit() and x[6].isdigit() and x[7].isdigit():
+    
+    print 'hi'
+    
 
 # assume first two lines are gone (Jeremie please get on this for the website)
 
